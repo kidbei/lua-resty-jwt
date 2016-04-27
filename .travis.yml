@@ -1,0 +1,14 @@
+language: bash
+
+services:
+  - docker
+
+before_install:
+  - docker pull skylothar/openresty-testsuite:latest
+
+script:
+  - docker-compose up
+
+branches:
+  only:
+    - master
